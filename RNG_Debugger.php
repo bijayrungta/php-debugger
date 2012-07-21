@@ -90,8 +90,8 @@ class RNG_Debugger
 
         $endUserIP = self::getRealIpAddress();
 
-        if (!empty($GLOBALS['_RNG']['TRUSTED_IPS'])) {
-            foreach ($GLOBALS['_RNG']['TRUSTED_IPS'] as $trustedIP) {
+        if (!empty(self::$aTrustedIPs)) {
+            foreach (self::$aTrustedIPs as $trustedIP) {
                 if (@preg_match("/^$trustedIP$/", $endUserIP, $aMatches)) {
                     return true;
                 }
