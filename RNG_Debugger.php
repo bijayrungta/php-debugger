@@ -80,7 +80,7 @@ class RNG_Debugger
             return true;
         }
 
-        if (!$disallowCli && isRunningFromCLI()) {
+        if (!$disallowCli && self::isRunningFromCLI()) {
             return true;
         }
 
